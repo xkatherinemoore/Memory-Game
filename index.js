@@ -17,6 +17,21 @@ let cards = [
   }
 ];
 
+const cardList = document.querySelectorAll("section>div");
+const cardListArr = Array.from(cardList);
+
+const selectInput = document.querySelector("select");
+
+selectInput.addEventListener("change", function () {
+  console.log(selectInput.selectedIndex);
+});
+
+cardListArr.map(function (card) {
+  card.addEventListener("click", function (e) {
+    e.target.style.backgroundColor = "green";
+  });
+});
+
 //Creates a shuffled array containing two of each card
 function shuffleCards(cards) {
   let numCards = cards.length;
