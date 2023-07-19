@@ -1,4 +1,4 @@
-import {superMario, avengers} from 'card_decks.js';
+import {superMario, avengers, defaultDeck} from 'card_decks.js';
 
 
 const cardList = document.querySelectorAll("section>div");
@@ -51,10 +51,14 @@ function shuffleCards(cards) {
 }
 //console.log(shuffleCards(cards));
 
+//Toggles to show card face
 function flipCard() {
     
+    //Include error handling: cannot flip over only one card
 }
 
+//Checks two flipped cards to see if they're a match
 function checkMatch() {
 
+    //If matched, keep face up. Otherwise, flip back facedown
 }

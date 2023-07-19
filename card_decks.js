@@ -1,9 +1,30 @@
 export let defaultDeck = [
     {
-        id: '',
-        img: '',
+        id: 'smile',
+        img: 'imgs/emojis/emoji-smile.svg',
     },
-]
+    {
+        id: 'frown',
+        img: 'imgs/emojis/emoji-frown.svg',
+    },
+    {
+        id: 'sunglasses',
+        img: 'imgs/emojis/emoji-sunglasses.svg',
+    },
+    {
+        id: 'dizzy',
+        img: 'imgs/emojis/emoji-dizzy.svg',
+    },
+    {
+        id: 'angry',
+        img: 'imgs/emojis/emoji-angry.svg',
+    },
+    {
+        id: 'wink',
+        img: 'imgs/emojis/emoji-wink.svg',
+    },
+];
+
 export let superMario = [
     {
         id: 'mario',
@@ -56,4 +77,4 @@ export let avengers = [
         id: 'thor',
         image: 'imgs/thor-hammer.png'
     },
-]
+];
