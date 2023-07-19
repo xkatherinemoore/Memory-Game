@@ -1,3 +1,9 @@
+export let defaultDeck = [
+    {
+        id: '',
+        img: '',
+    },
+]
 export let superMario = [
     {
         id: 'mario',
