@@ -1,6 +1,8 @@
 import {superMario, avengers, defaultDeck} from 'card_decks.js';
 
 
+let cards = defaultDeck;
+const shuffledArray = shuffleCards(cards);
 const cardList = document.querySelectorAll("section>div");
 const cardListArr = Array.from(cardList);
 
@@ -16,6 +18,9 @@ cardListArr.map(function (card) {
   });
 });
 
+/*
+    FUNCTIONS
+*/
 //Creates a shuffled array containing two of each card
 function shuffleCards(cards) {
     let numCards = cards.length;
@@ -49,11 +54,12 @@ function shuffleCards(cards) {
     
     return shuffledArray;
 }
-//console.log(shuffleCards(cards));
+
 
 //Toggles to show card face
 function flipCard() {
-    
+    e.target.classList.remove();
+    e.target.className = "front"
     //Include error handling: cannot flip over only one card
 }
 
@@ -62,3 +68,33 @@ function checkMatch() {
 
     //If matched, keep face up. Otherwise, flip back facedown
 }
+
+//Changes card face and back color based on selected theme
+function chooseTheme(input, cardArray, shuffledArray) {
+    let choice = input.selectedIndex;
+    //Mario
+    if (choice === 1) {
+        cardArray.map((card) => {
+            card.style.backgroundColor = "red";
+        })
+    } else if (choice === 2) {
+        cardArray.map((card) => {
+            card.style.backgroundColor = "blue";
+        })
+    } else {
+        cardArray.map((card) => {
+            card.style.backgroundColor = "purple";
+        })
+    }
+}
+
+/* 
+    EVENT LISTENERS
+*/
+//Choose Theme on dropdown change
+selectInput.addEventListener('change', chooseTheme);
+
+//Flip Card on click
+cardListArr.forEach((card) => {
+    card.addEventListener('click', flipCard);
+});
