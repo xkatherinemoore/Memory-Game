@@ -2,11 +2,8 @@ import { superMario, avengers, defaultDeck } from "./card_decks.js";
 
 let cards = superMario;
 const shuffledArray = shuffleCards(cards);
-console.log(shuffledArray);
-
 const cardList = document.querySelectorAll("section>div");
 const cardListArr = Array.from(cardList);
-
 const selectInput = document.querySelector("select");
 
 // Change the theme of the card deck
@@ -23,7 +20,7 @@ function changeTheme() {
     }
   }
 }
-
+// Flip cards and add the id and source image to the html element and background
 function flipCard(e) {
   console.log(e);
   e.target.classList.remove();
@@ -33,6 +30,30 @@ function flipCard(e) {
   let thisCard = shuffledArray[index];
 
   e.target.style.backgroundImage = thisCard.image;
+}
+
+function compareCardsInitMatch() {
+  let cardsFlipped = cardListArr.filter((card) => {
+    return card.className === "front";
+  });
+  if (cardsFlipped.length === 2) {
+    checkMatch();
+  }
+}
+
+//Checks two flipped cards to see if they're a match
+function checkMatch() {
+  let firstCardIndex = cardListArr.findIndex((card) => {
+    return card === "front";
+  });
+  let firstCard = shuffledArray[firstCardIndex];
+
+  let secondCardIndex = cardListArr.findIndex((card) => {
+    return card === "front";
+  }, firstCardIndex);
+
+  let secondCard = shuffledArray[secondCardIndex];
+  //If matched, keep face up. Otherwise, flip back facedown
 }
 
 //Creates a shuffled array containing two of each card
