@@ -82,13 +82,20 @@ function compareCardsInitMatch() {
 //Checks two flipped cards to see if they're a match
 function checkMatch() {
     let firstCardIndex = cardListArr.findIndex((card) => {
-        return card === 'front';
+        return card.className === 'front';
     });
     let firstCard = shuffledArray[firstCardIndex];
 
     let secondCardIndex = cardListArr.findIndex((card) => {
-        return card === 'front'
-    }, )
+        return card.className === 'front'
+    }, firstCardIndex);
+    let secondCard = shuffledArray[secondCardIndex];
+
+    if (firstCard.id === secondCard.id) {
+        //It's a match
+    } else {
+        //reset cards to .back
+    }
     //If matched, keep face up. Otherwise, flip back facedown
 }
 
