@@ -66,12 +66,13 @@ function flipCard(e) {;
     let thisCard = shuffledArray[index]; 
     
     e.target.style.backgroundimage = thisCard.image;
-    //Include error handling: cannot flip over only one card
+
+    compareCardsInitMatch();
 }
 
 function compareCardsInitMatch() {
     let cardsFlipped = cardListArr.filter((card) => {
-        return card.className === 'front';
+        return card.className.contains('front');
         }
     );
     if (cardsFlipped.length === 2) {
@@ -96,7 +97,6 @@ function checkMatch() {
     } else {
         //reset cards to .back
     }
-    //If matched, keep face up. Otherwise, flip back facedown
 }
 
 //Changes card face and back color based on selected theme
@@ -133,6 +133,3 @@ selectInput.addEventListener('change', chooseTheme);
 cardListArr.forEach((card) => {
     card.addEventListener('click', flipCard);
 });
-
-//For each click, compare classes of divs
-document.addEventListener('click', compareCardsInitMatch);
