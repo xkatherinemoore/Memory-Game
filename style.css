@@ -34,7 +34,10 @@ section {
   background-color: purple;
 }
 .front {
-  background-color: orange;
+  background-color: black;
+  background-size: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
   height: 150px;
 }
 /* button/select container */
