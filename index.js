@@ -58,25 +58,37 @@ function shuffleCards(cards) {
 
 
 //Toggles to show card face
-function flipCard(e) {
-    console.log(e);
+function flipCard(e) {;
     e.target.classList.remove();
     e.target.className = "front"
     
     let index = e.srcElement.id;
     let thisCard = shuffledArray[index]; 
     
-    e.target.style.backgroundimage = thisCard.img;
+    e.target.style.backgroundimage = thisCard.image;
     //Include error handling: cannot flip over only one card
 }
 
 function compareCardsInitMatch() {
-    
+    let cardsFlipped = cardListArr.filter((card) => {
+        return card.className === 'front';
+        }
+    );
+    if (cardsFlipped.length === 2) {
+        checkMatch(); 
+    }
 }
 
 //Checks two flipped cards to see if they're a match
 function checkMatch() {
+    let firstCardIndex = cardListArr.findIndex((card) => {
+        return card === 'front';
+    });
+    let firstCard = shuffledArray[firstCardIndex];
 
+    let secondCardIndex = cardListArr.findIndex((card) => {
+        return card === 'front'
+    }, )
     //If matched, keep face up. Otherwise, flip back facedown
 }
 
@@ -116,4 +128,4 @@ cardListArr.forEach((card) => {
 });
 
 //For each click, compare classes of divs
-//document.addEventListener('click', compareCardsInitMatch);
+document.addEventListener('click', compareCardsInitMatch);

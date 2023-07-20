@@ -1,27 +1,27 @@
 export let defaultDeck = [
     {
         id: 'smile',
-        img: 'url(imgs/emojis/emoji-smile.svg)',
+        image: 'url(imgs/emojis/emoji-smile.svg)',
     },
     {
         id: 'frown',
-        img: 'url(imgs/emojis/emoji-frown.svg)',
+        image: 'url(imgs/emojis/emoji-frown.svg)',
     },
     {
         id: 'sunglasses',
-        img: 'url(imgs/emojis/emoji-sunglasses.svg)',
+        image: 'url(imgs/emojis/emoji-sunglasses.svg)',
     },
     {
         id: 'dizzy',
-        img: 'url(imgs/emojis/emoji-dizzy.svg)',
+        image: 'url(imgs/emojis/emoji-dizzy.svg)',
     },
     {
         id: 'angry',
-        img: 'url(imgs/emojis/emoji-angry.svg)',
+        image: 'url(imgs/emojis/emoji-angry.svg)',
     },
     {
         id: 'wink',
-        img: 'url(imgs/emojis/emoji-wink.svg)',
+        image: 'url(imgs/emojis/emoji-wink.svg)',
     },
 ];
 
@@ -44,11 +44,11 @@ export let superMario = [
     },
     {
         id: 'big M',
-        image: 'url(imgs/super-mario-letter)'
+        image: 'url(imgs/super-mario-letter.png)'
     },
     {
         id: 'mario-logo',
-        image: 'url(imgs/super-mario-text)'
+        image: 'url(imgs/super-mario-text.png)'
     },
 ];
 
