@@ -33,7 +33,8 @@ section {
   margin: 0;
   background-color: purple;
 }
-.front {
+.front,
+.match {
   background-color: black;
   background-size: 100px;
   background-position: center;
