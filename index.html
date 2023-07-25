@@ -3,40 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Memory Game</title>
-
-    <!--STYLESHEETS-->
     <link rel="stylesheet" href="style.css" />
+    <title>card game</title>
   </head>
-
   <body>
     <main>
       <section>
         <h1>Memory Match Game</h1>
-        <div id="0" class="back"></div>
-        <div id="1" class="back"></div>
-        <div id="2" class="back"></div>
-        <div id="3" class="back"></div>
-        <div id="4" class="back"></div>
-        <div id="5" class="back"></div>
-        <div id="6" class="back"></div>
-        <div id="7" class="back"></div>
-        <div id="8" class="back"></div>
-        <div id="9" class="back"></div>
-        <div id="10" class="back"></div>
-        <div id="11" class="back"></div>
+        <h3>Moves Made: <span id="moveCount">0</span></h3>
+        <div id="cardDeck">
+          <div id="0" class="card basic"></div>
+          <div id="1" class="card basic"></div>
+          <div id="2" class="card basic"></div>
+          <div id="3" class="card basic"></div>
+          <div id="4" class="card basic"></div>
+          <div id="5" class="card basic"></div>
+          <div id="6" class="card basic"></div>
+          <div id="7" class="card basic"></div>
+          <div id="8" class="card basic"></div>
+          <div id="9" class="card basic"></div>
+          <div id="10" class="card basic"></div>
+          <div id="11" class="card basic"></div>
+        </div>
       </section>
       <div>
         <select>
-          <option value="">Change Deck Theme</option>
+          <option value="">Basic</option>
           <option value="mario">Super Mario</option>
           <option value="avengers">Avengers</option>
         </select>
-        <button>Start New Game</button>
+        <button id="newGame">Start New Game</button>
       </div>
     </main>
 
-    <!--SCRIPTS-->
     <script type="module" src="index.js"></script>
   </body>
 </html>
