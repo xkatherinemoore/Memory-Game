@@ -1,6 +1,6 @@
 import { superMario, avengers, defaultDeck } from "./card_decks.js";
 
-let cards = superMario;
+let cards = defaultDeck;
 const shuffledArray = shuffleCards(cards);
 const cardList = document.querySelectorAll("section>div");
 const cardListArr = Array.from(cardList);
@@ -16,7 +16,7 @@ console.log(shuffledArray);
 */
 //Creates a shuffled array containing two of each card
 function shuffleCards(cards) {
-    let numCards = cards.length;
+  let numCards = cards.length;
   let shuffleArray = [];
 
     //Puts one of each card in a random location
