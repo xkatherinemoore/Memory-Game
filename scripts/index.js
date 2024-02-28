@@ -1,4 +1,4 @@
-import { superMario, avengers, defaultDeck } from "./card_decks.js";
+import { superMario, avengers, defaultDeck } from "./gameData.js";
 
 let cards = defaultDeck;
 const shuffledArray = shuffleCards(cards);
